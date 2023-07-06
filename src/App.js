@@ -9,9 +9,11 @@ function App() {
     fetch('  http://localhost:3001/solutions')
         .then(res =>res.json())
         .then(json => {
-          console.log(json)
+        // random int between 0 & ...
+            const randomSolution = json[Math.floor(Math.random()*json.length)]
+            setSolution(randomSolution.word)
         })
-  }, [])
+  }, [setSolution])
 
   return (
     <div className="App">
@@ -20,6 +22,10 @@ function App() {
         <p>
           Hello Master Jah. Edit <code>src/App.js</code> and save to reload.
         </p>
+                <div>
+                    <h1>Wordle (Lingo)</h1>
+                    {solution && <div>Solution is: {solution}</div>}
+                </div>
         <a
           className="App-link"
           href="https://reactjs.org"
