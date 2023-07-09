@@ -24,7 +24,7 @@ function App() {
         </p>
                 <div>
                     <h1>Wordle (Lingo)</h1>
-                    {solution && <div>Solution is: {solution}</div>}
+                    {solution && <div>Solution is: {solution}</div>} {/* if both values are true, it prints out the string*/}
                 </div>
         <a
           className="App-link"

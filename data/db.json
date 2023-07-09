@@ -1,6 +1,7 @@
 {
   "solutions": [
     {"id": 1, "word": "ninja"},
-    {"id": 2, "word": "hello"}
+    {"id": 2, "word": "hello"},
+    {"id": 3, "word": "plate"}
   ]
 }
