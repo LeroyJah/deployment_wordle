@@ -16,25 +16,19 @@ function App() {
         })
   }, [setSolution])
 
-  return ( //all of this is converted to .jsx once send to the browser
+    //all of this is converted to .jsx once send to the browser
+    return (
     <div className="App">
             <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello Master Jah. Edit <code>src/App.js</code> and save to reload.
+          Hello Master Jah. Remember to push 3 commits each day.
         </p>
                 <div>
                     <h1>Wordle (Lingo)</h1>
                     {solution && <Wordle solution={solution}/>} {/* if both values are true, it prints out the string*/}
                 </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+                <div>Solution is: {solution}</div>
       </header>
     </div>
   );
