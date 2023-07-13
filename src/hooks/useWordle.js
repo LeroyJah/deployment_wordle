@@ -32,6 +32,7 @@ const useWordle = (solution) => {
     }
 
     const addNewGuess = (formattedGuess) => {
+        //if the solution is the same as the input, the boolean value is set to true and the game ends.
         if (currentGuess === solution) {
             setIsCorrect(true)
         }
@@ -81,8 +82,9 @@ const useWordle = (solution) => {
 
         //checks if the keyboard input is an alphabetical letter, if so it sends it to the screen
         if (/^[A-Za-z]$/.test(key)) {
+            //checks to see that the user input is not longer then 5 characters
             if (currentGuess.length < 5) {
-
+                //it adds the newest input together with the previous input to form a string.
                 setCurrentGuess((prev) => {
                     return prev + key
                 })

@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     fetch('  http://localhost:3001/solutions')// the json-array has been given api-endpoints and is fetched here
-        .then(res =>res.json())
+        .then(res => res.json())
         .then(json => {
         // random int between 0 & ...
             const randomSolution = json[Math.floor(Math.random()*json.length)]
