@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {useEffect, useState} from "react"; // here the hooks are imported
+import React, {useEffect, useState} from "react"; // here the hooks are imported
 import Wordle from "./components/Wordle";
 
 function App() {
@@ -16,6 +16,10 @@ function App() {
         })
   }, [setSolution])
 
+    function refreshPage() {
+        window.location.reload(false);
+    }
+
     //all of this is converted to .jsx once send to the browser
     return (
     <div className="App">
@@ -24,6 +28,9 @@ function App() {
         <p>
           Hello Master Jah. Remember to push 3 commits each day.
         </p>
+                <div>
+                    <button onClick={refreshPage}>Click to reload</button>
+                </div>
                 <div>
                     <h1>Wordle (Lingo)</h1>
                     {solution && <Wordle solution={solution}/>} {/* if both values are true, it prints out the string*/}
