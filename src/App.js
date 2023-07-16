@@ -24,9 +24,9 @@ function App() {
     return (
     <div className="App">
             <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={require("./senior-logo.png")} className="App-logo" alt="logo" />
         <p>
-          Hello Master Jah. Remember to push 3 commits each day.
+          Welkom. Kan jij raden welk woord hier staat?
         </p>
                 <div>
                     <button onClick={refreshPage}>Click to reload</button>
