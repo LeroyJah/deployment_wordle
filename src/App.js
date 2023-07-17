@@ -35,7 +35,7 @@ function App() {
                     <h1>Wordle (Lingo)</h1>
                     {solution && <Wordle solution={solution}/>} {/* if both values are true, it prints out the string*/}
                 </div>
-                <div>Solution is: {solution}</div>
+                {/*<div>Solution is: {solution}</div>*/}
       </header>
     </div>
   );
